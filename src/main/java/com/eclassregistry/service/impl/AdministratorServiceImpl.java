@@ -24,15 +24,15 @@ import org.springframework.stereotype.Service;
  * @author Grupa1
  */
 @Service
-public class AdministratorServiceImpl implements AdministratorService{
+public class AdministratorServiceImpl implements AdministratorService {
 
     @Autowired
     AdministratorRepository administratorRepository;
-    
+
     /**
-     * Saves administrator in database,
-     * if that administrator does not exists in databases then it creates a new one, 
-     * if that administrator exists in database then it updates it.
+     * Saves administrator in database, if that administrator does not exists in
+     * databases then it creates a new one, if that administrator exists in
+     * database then it updates it.
      *
      * @param userDto Object of class UserDto filled with values that needs to
      * be stored in database
@@ -60,7 +60,7 @@ public class AdministratorServiceImpl implements AdministratorService{
 
         return returnValue;
     }
-    
+
     /**
      * Retrieves all administrators from database and put them in a
      * List<UserDto>, this method has paging.
@@ -76,7 +76,7 @@ public class AdministratorServiceImpl implements AdministratorService{
 
         Pageable pageable = PageRequest.of(pageNumber, membersNumber);
         Page<AdministratorEntity> administratorEntityList = administratorRepository.findAll(pageable);
-        
+
         for (AdministratorEntity administratorEntity : administratorEntityList) {
             UserDto userDto = new UserDto();
 
@@ -115,18 +115,41 @@ public class AdministratorServiceImpl implements AdministratorService{
 
     /**
      * Deletes an administrator from database.
-     * @param jmbg Object of type UserEntity that represents a unique value in database
+     *
+     * @param userEntity Object of type UserEntity that represents a unique
+     * value in database
      */
     @Override
     public void deleteAdministrator(UserEntity userEntity) {
         AdministratorEntity administratorEntity = administratorRepository.findByJmbg(userEntity);
-        
-        if(administratorEntity==null){
+
+        if (administratorEntity == null) {
             throw new RuntimeException("Administrator with that id does not exists!");
         }
-        
+
         administratorRepository.delete(administratorEntity);
     }
 
-  
+    /**
+     * Retrieves administrator in database with that jmbg.
+     *
+     * @param userEntity UserEntity.class in which are stored informations about
+     * current administrator, including the jmbg
+     * @return UserDto.class filled with all informations about that
+     * administrator gained from database
+     */
+    @Override
+    public UserDto getAdministratorByJmbg(UserEntity userEntity) {
+        UserDto userDto = new UserDto();
+        AdministratorEntity administratorEntity = administratorRepository.findByJmbg(userEntity);
+
+        BeanUtils.copyProperties(administratorEntity, userDto);
+        userDto.setEmail(administratorEntity.getJmbg().getEmail());
+        userDto.setJmbg(administratorEntity.getJmbg().getJmbg());
+        userDto.setStatus(administratorEntity.getJmbg().getStatus().getStatusId());
+        userDto.setStatusName(administratorEntity.getJmbg().getStatus().getStatusName());
+
+        return userDto;
+    }
+
 }

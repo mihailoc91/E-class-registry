@@ -8,7 +8,7 @@
 const table = document.querySelector("#table");
 var pageNumber = table.dataset.pages;
 var status = table.dataset.status;
-alert(pageNumber);
+
 
 
 var element =document.getElementById("table_navigation");

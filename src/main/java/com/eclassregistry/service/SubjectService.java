@@ -14,10 +14,18 @@ import java.util.List;
  * @author Grupa1
  */
 public interface SubjectService {
+
     SubjectDto save(SubjectDto subjectDto);
+
     List<SubjectDto> getAllSubjects(int pageNumber, int membersNumber);
+
     SubjectDto getSubject(int id);
-    void deleteSubject (int id);
+
+    void deleteSubject(int id);
+
     SubjectEntity getSubjectById(int id);
+
     List<SubjectDto> getAllSubjects();
+
+    List<SubjectDto> getAllSubjectsFromTeacherId(int Id);
 }

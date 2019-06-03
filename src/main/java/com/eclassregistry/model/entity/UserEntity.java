@@ -6,11 +6,16 @@
 package com.eclassregistry.model.entity;
 
 import java.io.Serializable;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
@@ -23,13 +28,17 @@ import org.hibernate.annotations.OnDeleteAction;
 public class UserEntity implements Serializable {
     
     @Id
+    
     private long jmbg;
+//    @Email
     private String email;
+//    @NotEmpty
     private String password;
     
     @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(name = "status_id", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
+//    @NotNull
     private StatusEntity status;
 
     /**

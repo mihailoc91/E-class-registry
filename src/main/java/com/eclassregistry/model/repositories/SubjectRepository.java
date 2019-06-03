@@ -6,7 +6,9 @@
 package com.eclassregistry.model.repositories;
 
 import com.eclassregistry.model.entity.SubjectEntity;
+import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -15,5 +17,7 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface SubjectRepository extends JpaRepository<SubjectEntity, Integer>{
-    
+    SubjectEntity findBySubjectId(int id);
+    @Query(value="SELECT teachers_subjects.subject_id FROM teachers_subjects WHERE teachers_subjects.teacher_id = ?1",nativeQuery = true)
+    List<Integer> findAllSubjectFromteacherId(int id);
 }

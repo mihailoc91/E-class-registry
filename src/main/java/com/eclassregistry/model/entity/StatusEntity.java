@@ -9,6 +9,7 @@ import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.NotEmpty;
 
 /**
  *
@@ -20,6 +21,7 @@ public class StatusEntity implements Serializable {
     @Id
     @GeneratedValue
     private int statusId;
+//    @NotEmpty
     private String statusName;
 
     /**

@@ -8,6 +8,10 @@ package com.eclassregistry.shared.dto;
 import com.eclassregistry.model.entity.ClassEntity;
 import java.io.Serializable;
 import java.util.List;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 /**
  *
@@ -15,13 +19,23 @@ import java.util.List;
  */
 public class ClassDto implements Serializable {
     
+    
     private int classId;
+//    @NotBlank
+//    @Pattern(regexp = "[a-zA-Z]+")
     private String className;
+//    @Min(1)
     private int teacherId;
+    @Pattern(regexp = "[a-zA-Z]+")
     private String teacherFirstName;
+    
     private String teacherLastName;
+    
     private List<UserDto> listOfAvailableTeachers;
     private int numberOfPages;
+    
+    private double sumOfGrades;
+    private String subjectName;
     
     public ClassDto(){}
     
@@ -129,6 +143,22 @@ public class ClassDto implements Serializable {
      */
     public void setNumberOfPages(int numberOfPages) {
         this.numberOfPages = numberOfPages;
+    }
+
+    public double getSumOfGrades() {
+        return sumOfGrades;
+    }
+
+    public void setSumOfGrades(double sumOfGrades) {
+        this.sumOfGrades = sumOfGrades;
+    }
+
+    public String getSubjectName() {
+        return subjectName;
+    }
+
+    public void setSubjectName(String subjectName) {
+        this.subjectName = subjectName;
     }
     
 }

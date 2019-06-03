@@ -1,0 +1,339 @@
+2019-05-28 16:34:07,231 INFO o.s.b.StartupInfoLogger [main] Starting EClassRegistryApplication on DESKTOP-JTND3N7 with PID 13780 (started by Grupa1 in C:\Users\Grupa1\Documents\Praksa\smx_19_04\Grupa 2\E-Class-Registry)
+2019-05-28 16:34:07,246 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.1.4.RELEASE, Spring v5.1.6.RELEASE
+2019-05-28 16:34:07,246 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2019-05-28 16:34:08,543 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-28 16:34:08,824 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 266ms. Found 15 repository interfaces.
+2019-05-28 16:34:09,496 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$afa5529a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-28 16:34:10,277 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2019-05-28 16:34:10,308 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2019-05-28 16:34:10,324 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2019-05-28 16:34:10,324 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-05-28 16:34:10,777 INFO o.a.j.l.DirectJDKLog [main] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-05-28 16:34:10,777 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2019-05-28 16:34:10,777 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 3453 ms
+2019-05-28 16:34:11,073 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2019-05-28 16:34:11,277 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2019-05-28 16:34:11,386 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-05-28 16:34:11,511 INFO o.h.Version [main] HHH000412: Hibernate Core {5.3.9.Final}
+2019-05-28 16:34:11,511 INFO o.h.c.Environment [main] HHH000206: hibernate.properties not found
+2019-05-28 16:34:11,745 INFO o.h.a.c.r.j.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-05-28 16:34:11,776 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration boolean -> org.hibernate.type.BooleanType@217bf99e
+2019-05-28 16:34:11,776 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration boolean -> org.hibernate.type.BooleanType@217bf99e
+2019-05-28 16:34:11,776 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@217bf99e
+2019-05-28 16:34:11,776 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@73aeef7d
+2019-05-28 16:34:11,776 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration true_false -> org.hibernate.type.TrueFalseType@49469ffa
+2019-05-28 16:34:11,776 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration yes_no -> org.hibernate.type.YesNoType@58b5a2f3
+2019-05-28 16:34:11,792 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration byte -> org.hibernate.type.ByteType@2954f6ab
+2019-05-28 16:34:11,792 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration byte -> org.hibernate.type.ByteType@2954f6ab
+2019-05-28 16:34:11,792 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@2954f6ab
+2019-05-28 16:34:11,792 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration character -> org.hibernate.type.CharacterType@1943c1f2
+2019-05-28 16:34:11,792 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration char -> org.hibernate.type.CharacterType@1943c1f2
+2019-05-28 16:34:11,792 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@1943c1f2
+2019-05-28 16:34:11,792 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration short -> org.hibernate.type.ShortType@748a654a
+2019-05-28 16:34:11,792 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration short -> org.hibernate.type.ShortType@748a654a
+2019-05-28 16:34:11,792 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration java.lang.Short -> org.hibernate.type.ShortType@748a654a
+2019-05-28 16:34:11,792 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration integer -> org.hibernate.type.IntegerType@20eaeaf8
+2019-05-28 16:34:11,792 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration int -> org.hibernate.type.IntegerType@20eaeaf8
+2019-05-28 16:34:11,792 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@20eaeaf8
+2019-05-28 16:34:11,792 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration long -> org.hibernate.type.LongType@3aaa3c39
+2019-05-28 16:34:11,792 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration long -> org.hibernate.type.LongType@3aaa3c39
+2019-05-28 16:34:11,792 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration java.lang.Long -> org.hibernate.type.LongType@3aaa3c39
+2019-05-28 16:34:11,792 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration float -> org.hibernate.type.FloatType@7e351d7
+2019-05-28 16:34:11,792 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration float -> org.hibernate.type.FloatType@7e351d7
+2019-05-28 16:34:11,792 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration java.lang.Float -> org.hibernate.type.FloatType@7e351d7
+2019-05-28 16:34:11,792 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration double -> org.hibernate.type.DoubleType@58658f63
+2019-05-28 16:34:11,792 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration double -> org.hibernate.type.DoubleType@58658f63
+2019-05-28 16:34:11,792 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@58658f63
+2019-05-28 16:34:11,792 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@642857e0
+2019-05-28 16:34:11,792 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@642857e0
+2019-05-28 16:34:11,808 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration big_integer -> org.hibernate.type.BigIntegerType@5c9934da
+2019-05-28 16:34:11,808 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@5c9934da
+2019-05-28 16:34:11,808 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration string -> org.hibernate.type.StringType@5b88b8e
+2019-05-28 16:34:11,808 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration java.lang.String -> org.hibernate.type.StringType@5b88b8e
+2019-05-28 16:34:11,808 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration nstring -> org.hibernate.type.StringNVarcharType@1bf14704
+2019-05-28 16:34:11,808 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@124dac75
+2019-05-28 16:34:11,808 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration url -> org.hibernate.type.UrlType@14c93774
+2019-05-28 16:34:11,808 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration java.net.URL -> org.hibernate.type.UrlType@14c93774
+2019-05-28 16:34:11,808 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration Duration -> org.hibernate.type.DurationType@1f939a0f
+2019-05-28 16:34:11,808 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration java.time.Duration -> org.hibernate.type.DurationType@1f939a0f
+2019-05-28 16:34:11,808 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration Instant -> org.hibernate.type.InstantType@d16be4f
+2019-05-28 16:34:11,808 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration java.time.Instant -> org.hibernate.type.InstantType@d16be4f
+2019-05-28 16:34:11,808 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@250a9031
+2019-05-28 16:34:11,808 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@250a9031
+2019-05-28 16:34:11,808 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration LocalDate -> org.hibernate.type.LocalDateType@7112ce6
+2019-05-28 16:34:11,823 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@7112ce6
+2019-05-28 16:34:11,823 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@7134b8a7
+2019-05-28 16:34:11,823 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@7134b8a7
+2019-05-28 16:34:11,823 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@f3560d4
+2019-05-28 16:34:11,823 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@f3560d4
+2019-05-28 16:34:11,839 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@45ab3bdd
+2019-05-28 16:34:11,839 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@45ab3bdd
+2019-05-28 16:34:11,839 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@1319bc2a
+2019-05-28 16:34:11,839 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@1319bc2a
+2019-05-28 16:34:11,839 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration date -> org.hibernate.type.DateType@7d986d83
+2019-05-28 16:34:11,839 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration java.sql.Date -> org.hibernate.type.DateType@7d986d83
+2019-05-28 16:34:11,839 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration time -> org.hibernate.type.TimeType@6968bcec
+2019-05-28 16:34:11,839 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration java.sql.Time -> org.hibernate.type.TimeType@6968bcec
+2019-05-28 16:34:11,839 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration timestamp -> org.hibernate.type.TimestampType@4bdf
+2019-05-28 16:34:11,839 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@4bdf
+2019-05-28 16:34:11,839 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration java.util.Date -> org.hibernate.type.TimestampType@4bdf
+2019-05-28 16:34:11,839 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@7a9eccc4
+2019-05-28 16:34:11,839 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration calendar -> org.hibernate.type.CalendarType@d48e998
+2019-05-28 16:34:11,839 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@d48e998
+2019-05-28 16:34:11,854 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@d48e998
+2019-05-28 16:34:11,854 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@50eb4a2c
+2019-05-28 16:34:11,854 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration locale -> org.hibernate.type.LocaleType@497d4c96
+2019-05-28 16:34:11,854 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@497d4c96
+2019-05-28 16:34:11,854 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration currency -> org.hibernate.type.CurrencyType@39f5b723
+2019-05-28 16:34:11,854 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@39f5b723
+2019-05-28 16:34:11,854 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration timezone -> org.hibernate.type.TimeZoneType@31a2a9fa
+2019-05-28 16:34:11,854 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@31a2a9fa
+2019-05-28 16:34:11,854 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration class -> org.hibernate.type.ClassType@36e43829
+2019-05-28 16:34:11,854 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration java.lang.Class -> org.hibernate.type.ClassType@36e43829
+2019-05-28 16:34:11,854 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@1d06f16f
+2019-05-28 16:34:11,854 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@1d06f16f
+2019-05-28 16:34:11,854 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@4a44cfc0
+2019-05-28 16:34:11,854 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration binary -> org.hibernate.type.BinaryType@1b410308
+2019-05-28 16:34:11,854 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration byte[] -> org.hibernate.type.BinaryType@1b410308
+2019-05-28 16:34:11,854 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration [B -> org.hibernate.type.BinaryType@1b410308
+2019-05-28 16:34:11,870 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@16736040
+2019-05-28 16:34:11,870 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@16736040
+2019-05-28 16:34:11,870 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@16736040
+2019-05-28 16:34:11,870 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration row_version -> org.hibernate.type.RowVersionType@26ca61bf
+2019-05-28 16:34:11,870 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration image -> org.hibernate.type.ImageType@6a1d526c
+2019-05-28 16:34:11,870 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration characters -> org.hibernate.type.CharArrayType@fb0a08c
+2019-05-28 16:34:11,870 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration char[] -> org.hibernate.type.CharArrayType@fb0a08c
+2019-05-28 16:34:11,870 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration [C -> org.hibernate.type.CharArrayType@fb0a08c
+2019-05-28 16:34:11,870 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@66a5755
+2019-05-28 16:34:11,870 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@66a5755
+2019-05-28 16:34:11,870 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@66a5755
+2019-05-28 16:34:11,870 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration text -> org.hibernate.type.TextType@e95595b
+2019-05-28 16:34:11,870 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration ntext -> org.hibernate.type.NTextType@796f632b
+2019-05-28 16:34:11,870 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration blob -> org.hibernate.type.BlobType@18a19e
+2019-05-28 16:34:11,870 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@18a19e
+2019-05-28 16:34:11,870 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@787508ca
+2019-05-28 16:34:11,886 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration clob -> org.hibernate.type.ClobType@7f7b6639
+2019-05-28 16:34:11,886 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@7f7b6639
+2019-05-28 16:34:11,886 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration nclob -> org.hibernate.type.NClobType@3408f695
+2019-05-28 16:34:11,886 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@3408f695
+2019-05-28 16:34:11,886 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@4887de2b
+2019-05-28 16:34:11,886 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@7980cf2c
+2019-05-28 16:34:11,886 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration serializable -> org.hibernate.type.SerializableType@2582b0ef
+2019-05-28 16:34:11,886 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration object -> org.hibernate.type.ObjectType@74606204
+2019-05-28 16:34:11,886 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@74606204
+2019-05-28 16:34:11,886 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@7ae0cc89
+2019-05-28 16:34:11,886 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@de7e193
+2019-05-28 16:34:11,886 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@13e5d243
+2019-05-28 16:34:11,886 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@35ef439e
+2019-05-28 16:34:11,886 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@4997552e
+2019-05-28 16:34:11,886 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@7bcecef6
+2019-05-28 16:34:11,886 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@46046c06
+2019-05-28 16:34:11,886 DEBUG o.h.t.BasicTypeRegistry [main] Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@93824eb
+2019-05-28 16:34:12,104 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-05-28 16:34:12,183 DEBUG o.h.t.s.TypeConfiguration [main] Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@52559a69] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@285583d4]
+2019-05-28 16:34:12,636 DEBUG o.h.t.s.TypeConfiguration [main] Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@52559a69] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@20440c6c]
+2019-05-28 16:34:13,479 TRACE o.h.t.s.TypeConfiguration [main] Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@20440c6c] for TypeConfiguration
+2019-05-28 16:34:13,479 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-05-28 16:34:14,965 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6ab50d1c, org.springframework.security.web.context.SecurityContextPersistenceFilter@4583b617, org.springframework.security.web.header.HeaderWriterFilter@5fb514c2, org.springframework.security.web.csrf.CsrfFilter@7482309c, org.springframework.security.web.authentication.logout.LogoutFilter@45849604, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3df04fa1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@211da640, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@398694a6, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@5be69f7e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6e0d058a, org.springframework.security.web.session.SessionManagementFilter@3c97f5e9, org.springframework.security.web.access.ExceptionTranslationFilter@2474df51, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@29bd2796]
+2019-05-28 16:34:15,228 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-28 16:34:15,310 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-05-28 16:34:15,441 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2019-05-28 16:34:15,638 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2019-05-28 16:34:15,655 ERROR o.a.j.l.DirectJDKLog [main] Failed to start component [Connector[HTTP/1.1-8080]]
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1008) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:226) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:259) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:197) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:311) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:164) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552) [spring-context-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at com.eclassregistry.EClassRegistryApplication.main(EClassRegistryApplication.java:25) [classes/:?]
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method) ~[?:1.8.0_151]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[?:1.8.0_151]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[?:1.8.0_151]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223) ~[?:1.8.0_151]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[?:1.8.0_151]
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:236) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1103) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1189) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:568) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1005) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	... 14 more
+2019-05-28 16:34:15,684 INFO o.a.j.l.DirectJDKLog [main] Pausing ProtocolHandler ["http-nio-8080"]
+2019-05-28 16:34:15,684 INFO o.a.j.l.DirectJDKLog [main] Stopping service [Tomcat]
+2019-05-28 16:34:15,692 INFO o.a.j.l.DirectJDKLog [main] The stop() method was called on component [StandardServer[-1]] after stop() had already been called. The second call will be ignored.
+2019-05-28 16:34:15,693 INFO o.a.j.l.DirectJDKLog [main] Stopping ProtocolHandler ["http-nio-8080"]
+2019-05-28 16:34:15,693 INFO o.a.j.l.DirectJDKLog [main] Destroying ProtocolHandler ["http-nio-8080"]
+2019-05-28 16:34:15,696 INFO o.s.b.a.l.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-05-28 16:34:15,699 ERROR o.s.b.d.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2019-05-28 16:34:15,704 INFO o.s.s.c.ExecutorConfigurationSupport [main] Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-28 16:34:15,711 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-05-28 16:34:15,711 TRACE o.h.t.s.TypeConfiguration [main] Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@20440c6c] for TypeConfiguration
+2019-05-28 16:34:15,711 DEBUG o.h.t.s.TypeConfiguration$Scope [main] Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@4db568e1] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@20440c6c]
+2019-05-28 16:34:15,713 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
+2019-05-28 16:34:15,722 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Shutdown completed.
+2019-05-28 16:34:24,897 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-5] select userentity0_.jmbg as jmbg1_17_, userentity0_.email as email2_17_, userentity0_.password as password3_17_, userentity0_.status_id as status_i4_17_ from users userentity0_ where userentity0_.email=?
+2019-05-28 16:34:24,899 TRACE o.h.t.d.s.BasicBinder [http-nio-8080-exec-5] binding parameter [1] as [VARCHAR] - [test3@test.com]
+2019-05-28 16:34:24,901 TRACE o.h.t.d.s.BasicExtractor [http-nio-8080-exec-5] extracted value ([jmbg1_17_] : [BIGINT]) - [3]
+2019-05-28 16:34:24,902 TRACE o.h.t.d.s.BasicExtractor [http-nio-8080-exec-5] extracted value ([email2_17_] : [VARCHAR]) - [test3@test.com]
+2019-05-28 16:34:24,902 TRACE o.h.t.d.s.BasicExtractor [http-nio-8080-exec-5] extracted value ([password3_17_] : [VARCHAR]) - [$2a$10$BUuuY28XDOVf0WiyZu5lFu0NUA1YC2.tHCqyGH0T2GctkOuvtpLgS]
+2019-05-28 16:34:24,903 TRACE o.h.t.d.s.BasicExtractor [http-nio-8080-exec-5] extracted value ([status_i4_17_] : [INTEGER]) - [1]
+2019-05-28 16:34:24,903 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-5] select statusenti0_.status_id as status_i1_11_0_, statusenti0_.status_name as status_n2_11_0_ from status statusenti0_ where statusenti0_.status_id=?
+2019-05-28 16:34:24,904 TRACE o.h.t.d.s.BasicBinder [http-nio-8080-exec-5] binding parameter [1] as [INTEGER] - [1]
+2019-05-28 16:34:24,905 TRACE o.h.t.d.s.BasicExtractor [http-nio-8080-exec-5] extracted value ([status_n2_11_0_] : [VARCHAR]) - [Administrator]
+2019-05-28 16:34:24,999 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-6] select userentity0_.jmbg as jmbg1_17_, userentity0_.email as email2_17_, userentity0_.password as password3_17_, userentity0_.status_id as status_i4_17_ from users userentity0_ where userentity0_.email=?
+2019-05-28 16:34:25,000 TRACE o.h.t.d.s.BasicBinder [http-nio-8080-exec-6] binding parameter [1] as [VARCHAR] - [test3@test.com]
+2019-05-28 16:34:25,001 TRACE o.h.t.d.s.BasicExtractor [http-nio-8080-exec-6] extracted value ([jmbg1_17_] : [BIGINT]) - [3]
+2019-05-28 16:34:25,002 TRACE o.h.t.d.s.BasicExtractor [http-nio-8080-exec-6] extracted value ([email2_17_] : [VARCHAR]) - [test3@test.com]
+2019-05-28 16:34:25,002 TRACE o.h.t.d.s.BasicExtractor [http-nio-8080-exec-6] extracted value ([password3_17_] : [VARCHAR]) - [$2a$10$BUuuY28XDOVf0WiyZu5lFu0NUA1YC2.tHCqyGH0T2GctkOuvtpLgS]
+2019-05-28 16:34:25,003 TRACE o.h.t.d.s.BasicExtractor [http-nio-8080-exec-6] extracted value ([status_i4_17_] : [INTEGER]) - [1]
+2019-05-28 16:34:25,003 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-6] select statusenti0_.status_id as status_i1_11_0_, statusenti0_.status_name as status_n2_11_0_ from status statusenti0_ where statusenti0_.status_id=?
+2019-05-28 16:34:25,004 TRACE o.h.t.d.s.BasicBinder [http-nio-8080-exec-6] binding parameter [1] as [INTEGER] - [1]
+2019-05-28 16:34:25,005 TRACE o.h.t.d.s.BasicExtractor [http-nio-8080-exec-6] extracted value ([status_n2_11_0_] : [VARCHAR]) - [Administrator]
+2019-05-28 16:34:25,007 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-6] select administra0_.id as id1_0_, administra0_.first_name as first_na2_0_, administra0_.jmbg_jmbg as jmbg_jmb4_0_, administra0_.last_name as last_nam3_0_ from administrators administra0_ where administra0_.jmbg_jmbg=?
+2019-05-28 16:34:25,008 TRACE o.h.t.d.s.BasicBinder [http-nio-8080-exec-6] binding parameter [1] as [BIGINT] - [3]
+2019-05-28 16:34:25,009 TRACE o.h.t.d.s.BasicExtractor [http-nio-8080-exec-6] extracted value ([id1_0_] : [INTEGER]) - [1]
+2019-05-28 16:34:25,010 TRACE o.h.t.d.s.BasicExtractor [http-nio-8080-exec-6] extracted value ([first_na2_0_] : [VARCHAR]) - [Administrator3]
+2019-05-28 16:34:25,010 TRACE o.h.t.d.s.BasicExtractor [http-nio-8080-exec-6] extracted value ([jmbg_jmb4_0_] : [BIGINT]) - [3]
+2019-05-28 16:34:25,011 TRACE o.h.t.d.s.BasicExtractor [http-nio-8080-exec-6] extracted value ([last_nam3_0_] : [VARCHAR]) - [Administrator3]
+2019-05-28 16:34:26,334 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-10] SELECT teachers.id, teachers.first_name, teachers.last_name, teachers.jmbg_jmbg FROM teachers LEFT JOIN classes ON teachers.id=classes.teacher_id WHERE classes.teacher_id IS NULL
+2019-05-28 16:34:26,337 TRACE o.h.t.d.s.BasicExtractor [http-nio-8080-exec-10] extracted value ([id] : [INTEGER]) - [7]
+2019-05-28 16:34:26,337 TRACE o.h.t.d.s.BasicExtractor [http-nio-8080-exec-10] extracted value ([first_name] : [VARCHAR]) - [Teacher25]
+2019-05-28 16:34:26,338 TRACE o.h.t.d.s.BasicExtractor [http-nio-8080-exec-10] extracted value ([last_name] : [VARCHAR]) - [Teacher25]
+2019-05-28 16:34:26,339 TRACE o.h.t.d.s.BasicExtractor [http-nio-8080-exec-10] extracted value ([jmbg_jmbg] : [NUMERIC]) - [25]
+2019-05-28 16:34:31,321 ERROR o.a.j.l.DirectJDKLog [http-nio-8080-exec-2] Servlet.service() for servlet [dispatcherServlet] in context with path [/e-register] threw exception [Handler dispatch failed; nested exception is java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: interface javax.validation.constraints.NotBlank: @javax.validation.constraints.NotBlank(message={javax.validation.constraints.NotBlank.message}, groups=[], payload=[])] with root cause
+java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: interface javax.validation.constraints.NotBlank: @javax.validation.constraints.NotBlank(message={javax.validation.constraints.NotBlank.message}, groups=[], payload=[])
+	at sun.reflect.annotation.TypeAnnotationParser.mapTypeAnnotations(TypeAnnotationParser.java:360) ~[?:1.8.0_151]
+	at sun.reflect.annotation.AnnotatedTypeFactory$AnnotatedTypeBaseImpl.<init>(AnnotatedTypeFactory.java:139) ~[?:1.8.0_151]
+	at sun.reflect.annotation.AnnotatedTypeFactory.buildAnnotatedType(AnnotatedTypeFactory.java:65) ~[?:1.8.0_151]
+	at sun.reflect.annotation.TypeAnnotationParser.buildAnnotatedType(TypeAnnotationParser.java:79) ~[?:1.8.0_151]
+	at java.lang.reflect.Field.getAnnotatedType(Field.java:1170) ~[?:1.8.0_151]
+	at org.hibernate.validator.internal.metadata.provider.AnnotationMetaDataProvider.findCascadingMetaData(AnnotationMetaDataProvider.java:618) ~[hibernate-validator-6.0.16.Final.jar:6.0.16.Final]
+	at org.hibernate.validator.internal.metadata.provider.AnnotationMetaDataProvider.findPropertyMetaData(AnnotationMetaDataProvider.java:236) ~[hibernate-validator-6.0.16.Final.jar:6.0.16.Final]
+	at org.hibernate.validator.internal.metadata.provider.AnnotationMetaDataProvider.getFieldMetaData(AnnotationMetaDataProvider.java:225) ~[hibernate-validator-6.0.16.Final.jar:6.0.16.Final]
+	at org.hibernate.validator.internal.metadata.provider.AnnotationMetaDataProvider.retrieveBeanConfiguration(AnnotationMetaDataProvider.java:133) ~[hibernate-validator-6.0.16.Final.jar:6.0.16.Final]
+	at org.hibernate.validator.internal.metadata.provider.AnnotationMetaDataProvider.getBeanConfiguration(AnnotationMetaDataProvider.java:124) ~[hibernate-validator-6.0.16.Final.jar:6.0.16.Final]
+	at org.hibernate.validator.internal.metadata.BeanMetaDataManager.getBeanConfigurationForHierarchy(BeanMetaDataManager.java:232) ~[hibernate-validator-6.0.16.Final.jar:6.0.16.Final]
+	at org.hibernate.validator.internal.metadata.BeanMetaDataManager.createBeanMetaData(BeanMetaDataManager.java:199) ~[hibernate-validator-6.0.16.Final.jar:6.0.16.Final]
+	at org.hibernate.validator.internal.metadata.BeanMetaDataManager.getBeanMetaData(BeanMetaDataManager.java:166) ~[hibernate-validator-6.0.16.Final.jar:6.0.16.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validate(ValidatorImpl.java:157) ~[hibernate-validator-6.0.16.Final.jar:6.0.16.Final]
+	at org.springframework.validation.beanvalidation.SpringValidatorAdapter.validate(SpringValidatorAdapter.java:108) ~[spring-context-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.boot.autoconfigure.validation.ValidatorAdapter.validate(ValidatorAdapter.java:66) ~[spring-boot-autoconfigure-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.validation.DataBinder.validate(DataBinder.java:892) ~[spring-context-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.method.annotation.ModelAttributeMethodProcessor.validateIfApplicable(ModelAttributeMethodProcessor.java:360) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.method.annotation.ModelAttributeMethodProcessor.resolveArgument(ModelAttributeMethodProcessor.java:162) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:126) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:166) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) ~[spring-security-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127) ~[spring-security-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91) ~[spring-security-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119) ~[spring-security-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) ~[spring-security-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:158) ~[spring-security-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170) ~[spring-security-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200) ~[spring-security-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:124) ~[spring-security-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74) ~[spring-security-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_151]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_151]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_151]

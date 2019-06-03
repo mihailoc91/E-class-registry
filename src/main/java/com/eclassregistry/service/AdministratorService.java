@@ -14,8 +14,14 @@ import java.util.List;
  * @author Grupa1
  */
 public interface AdministratorService {
-   UserDto saveAdministrator(UserDto userDto, UserEntity userEntity);
-   List <UserDto> getAllAdministrators(int pageNumber, int membersNumber);
-   UserDto getAdministratorById(int id);
-   void deleteAdministrator(UserEntity userEntity);
+
+    UserDto saveAdministrator(UserDto userDto, UserEntity userEntity);
+
+    List<UserDto> getAllAdministrators(int pageNumber, int membersNumber);
+
+    UserDto getAdministratorById(int id);
+
+    void deleteAdministrator(UserEntity userEntity);
+
+    UserDto getAdministratorByJmbg(UserEntity userEntity);
 }

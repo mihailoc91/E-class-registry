@@ -7,6 +7,7 @@ package com.eclassregistry.shared.dto;
 
 import java.io.Serializable;
 import java.util.Set;
+import javax.validation.constraints.NotBlank;
 
 /**
  *
@@ -15,6 +16,7 @@ import java.util.Set;
 public class SubjectDto implements Serializable {
     
     private int subjectId;
+    @NotBlank
     private String subjectName;
     private Set<Integer> teachers;
 

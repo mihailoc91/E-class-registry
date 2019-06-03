@@ -12,6 +12,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import org.hibernate.annotations.Generated;
 
 /**
@@ -27,9 +29,11 @@ public class DirectorEntity implements Serializable{
     private int id;
     
     @ManyToOne(fetch = FetchType.EAGER)
+//    @NotNull
     private UserEntity jmbg;
-    
+//    @NotEmpty
     private String firstName;
+//    @NotEmpty
     private String lastName;
 
     /**

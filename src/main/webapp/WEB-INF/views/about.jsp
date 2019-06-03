@@ -16,9 +16,10 @@
     </head>
     <body class="bod">
         <ul>
-            <li><a href="<c:url value="/index"/>">Home</a></li>
+            <li><a href="<c:url value="/"/>">Home</a></li>
             <li><a href="<c:url value="/contact"/>">Contact</a></li>
             <li><a href="<c:url value="/about"/>">About</a></li>
+            <li class="log"><a href="<c:url value="/login"/>">Login</a></li>
         </ul>
         <h3>About us!</h3>
         <p class="nn"> 

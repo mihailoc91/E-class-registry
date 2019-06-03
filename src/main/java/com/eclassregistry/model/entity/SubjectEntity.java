@@ -12,6 +12,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.validation.constraints.NotEmpty;
 
 /**
  *
@@ -23,6 +24,7 @@ public class SubjectEntity implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int subjectId;
+//    @NotEmpty
     private String subjectName;
     
     @ManyToMany(mappedBy = "subjects")

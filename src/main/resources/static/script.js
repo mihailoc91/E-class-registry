@@ -22,7 +22,7 @@ redips.init = function () {
 	// prepare node list of DIV elements in table2
 	redips.divNodeList = document.getElementById('table2').getElementsByTagName('div');
 	// show / hide report buttons (needed for dynamic version - with index.php)
-	redips.reportButton();
+//	redips.reportButton();
 	// element is dropped
 	rd.event.dropped = function () {
 		var	objOld = rd.objOld,					// original object
@@ -30,25 +30,25 @@ redips.init = function () {
 			targetRow = targetCell.parentNode,	// target row
 			i, objNew;							// local variables
 		// if checkbox is checked and original element is of clone type then clone spread subjects to the week
-		if (document.getElementById('week').checked === true && objOld.className.indexOf('redips-clone') > -1) {
-			// loop through table cells
-			for (i = 0; i < targetRow.cells.length; i++) {
-				// skip cell if cell has some content (first column is not empty because it contains label)
-				if (targetRow.cells[i].childNodes.length > 0) {
-					continue;
-				}
-				// clone DIV element
-				objNew = rd.cloneObject(objOld);
-				// append to the table cell
-				targetRow.cells[i].appendChild(objNew);
-			}
-		}
+//		if (document.getElementById('week').checked === true && objOld.className.indexOf('redips-clone') > -1) {
+//			// loop through table cells
+//			for (i = 0; i < targetRow.cells.length; i++) {
+//				// skip cell if cell has some content (first column is not empty because it contains label)
+//				if (targetRow.cells[i].childNodes.length > 0) {
+//					continue;
+//				}
+//				// clone DIV element
+//				objNew = rd.cloneObject(objOld);
+//				// append to the table cell
+//				targetRow.cells[i].appendChild(objNew);
+//			}
+//		}
 		// print message only if target and source table cell differ
-		if (rd.td.target !== rd.td.source) { 
-			redips.printMessage('Content has been changed!');
-		}
+//		if (rd.td.target !== rd.td.source) { 
+//			redips.printMessage('Content has been changed!');
+//		}
 		// show / hide report buttons
-		redips.reportButton();
+//		redips.reportButton();
 	};
 
 	// after element is deleted from the timetable, print message

@@ -17,6 +17,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 /**
  *
@@ -29,17 +31,21 @@ public class StudentEntity implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int studentId;
+//    @NotEmpty
     private String firstName;
+//    @NotEmpty
     private String lastName;
     
     @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(name = "class", nullable = false)
+//    @NotNull
     private ClassEntity classEntity;
     
     @ManyToMany
        @JoinTable(name = "students_parents",
                joinColumns = @JoinColumn (name="student_id"),
                inverseJoinColumns = @JoinColumn(name = "parent_id"))
+//    @NotEmpty
     private List<ParentEntity> parents;
 
     /**

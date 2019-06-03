@@ -14,6 +14,10 @@ import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -22,30 +26,31 @@ import org.springframework.transaction.annotation.Transactional;
  *
  * @author Mihailo
  */
-
 @Service
 @Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
 
     @Autowired
     UserRepository userRepository;
-    
+
     @Autowired
     StatusRepository statusRepository;
-    
+
     @Autowired
     AdministratorServiceImpl administratorServiceImpl;
-    
+
     @Autowired
     DirectorServiceImpl directorServiceImpl;
-    
+
     @Autowired
     TeacherServiceImpl teacherServiceImpl;
-    
+
     @Autowired
     ParentServiceImpl parentServiceImpl;
-    
-    
+
+    @Autowired
+    BCryptPasswordEncoder bCryptPasswordEncoder;
+
     /**
      * Creates a new user in database with data received from UI trough UserDto
      * object. First it creates and saves a UserEntity and after that it creates
@@ -70,7 +75,7 @@ public class UserServiceImpl implements UserService{
 
         BeanUtils.copyProperties(user, userEntity);
         userEntity.setStatus(statusRepository.findById(user.getStatus()).get());
-
+        userEntity.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         UserEntity storedUser = userRepository.save(userEntity);
 
         UserDto returnValue = new UserDto();
@@ -125,7 +130,7 @@ public class UserServiceImpl implements UserService{
             default:
                 throw new RuntimeException("Unsupported status!");
         }
-        
+
         return returnValue;
     }
 
@@ -163,7 +168,7 @@ public class UserServiceImpl implements UserService{
         return returnValue;
     }
 
-     /**
+    /**
      * Updates a user in database with data received from UI trough UserDto
      * object. First it updates a UserEntity and after that it updates in regard
      * to value of attribute status of UserEntity (AdministratorEntity,
@@ -181,7 +186,7 @@ public class UserServiceImpl implements UserService{
         if (userEntity == null) {
             throw new RuntimeException("User do not exist!");
         }
-     
+
         if (userDto.getStatus() != userEntity.getStatus().getStatusId()) {
 
             switch (userEntity.getStatus().getStatusId()) {
@@ -202,10 +207,12 @@ public class UserServiceImpl implements UserService{
             }
         }
 
-        if(userDto.getPassword().isEmpty()){
+        if (userDto.getPassword().isEmpty()) {
             userDto.setPassword(userEntity.getPassword());
+        } else {
+            userDto.setPassword(bCryptPasswordEncoder.encode(userDto.getPassword()));
         }
-        
+
         BeanUtils.copyProperties(userDto, userEntity);
         userEntity.setStatus(statusRepository.findById(userDto.getStatus()).get());
 
@@ -276,12 +283,67 @@ public class UserServiceImpl implements UserService{
     @Override
     public UserEntity getUserByJmbg(long jmbg) {
         UserEntity userEntity = new UserEntity();
-        
+
         userEntity = userRepository.findByJmbg(jmbg);
-        
+
         return userEntity;
     }
-    
-    
-    
+
+    /**
+     * Overrides method from Interface UserDetailsService, so we can get custom
+     * representation of authorized user for our application. Loads User from
+     * database with specific email, and returns User
+     * (org.springframework.security.core.userdetails.User) that can be used by
+     * Spring Security for authentication and authorization
+     *
+     * @param email String email that is inserted by the user through login form
+     * @return Object of type User with right credentials
+     * @throws UsernameNotFoundException a Spring made exception
+     */
+    @Override
+    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+        UserEntity userEntity = userRepository.findByEmail(email);
+
+        if (userEntity == null) {
+            throw new UsernameNotFoundException(email);
+        }
+
+//      return new User(userEntity.getEmail(),userEntity.getPassword(),new ArrayList<>());
+        return User.withUsername(userEntity.getEmail())
+                .password(userEntity.getPassword())
+                .roles(userEntity.getStatus().getStatusName()).build();
+
+    }
+
+    /**
+     * Returns a User from database with that email.
+     *
+     * @param email String that represents the email of a user
+     * @return Object of type UserDto filled with data from database
+     */
+    @Override
+    public UserDto getUserByEmail(String email) {
+        UserEntity userEntity = userRepository.findByEmail(email);
+
+        UserDto returnValue = new UserDto();
+        switch (userEntity.getStatus().getStatusId()) {
+            case 1:
+                returnValue = administratorServiceImpl.getAdministratorByJmbg(userEntity);
+                break;
+            case 2:
+                returnValue = directorServiceImpl.getDirectorByJmbg(userEntity);
+                break;
+            case 3:
+                returnValue = teacherServiceImpl.getTeacherByJmbg(userEntity);
+                break;
+            case 4:
+                returnValue = parentServiceImpl.getParentByJmbg(userEntity);
+                break;
+            default:
+                throw new RuntimeException("Could not find user with this email: " + email + " !!");
+        }
+
+        return returnValue;
+    }
+
 }

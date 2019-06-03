@@ -15,6 +15,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 /**
  *
@@ -29,12 +31,14 @@ public class ParentEntity implements Serializable {
     private int id;
     
     @ManyToOne(fetch = FetchType.EAGER)
+//    @NotNull
     private UserEntity jmbg;
-    
+//    @NotEmpty
     private String firstName;
+//    @NotEmpty
     private String lastName;
     
-     @ManyToMany(mappedBy = "parents")
+    @ManyToMany(mappedBy = "parents")
     private List<StudentEntity> kids;
 
     /**

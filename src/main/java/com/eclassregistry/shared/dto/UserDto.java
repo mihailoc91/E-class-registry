@@ -8,9 +8,11 @@ package com.eclassregistry.shared.dto;
 import java.io.Serializable;
 import java.util.List;
 import java.util.Set;
-import javax.validation.constraints.Email;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Pattern;
+
 import javax.validation.constraints.Size;
-import org.springframework.format.annotation.NumberFormat;
+import org.hibernate.validator.constraints.Email;
 import org.springframework.stereotype.Component;
 
 /**
@@ -23,13 +25,17 @@ public class UserDto implements Serializable {
    
     private int id;
    
+    @Min(1)
     private long jmbg;
     @Email()
     private String email;
     @Size (min = 6, max = 60)
     private String password;
+
+    @Pattern(regexp = "[0-9]+")
     private int status;
     private String statusName;
+//    @Size(min = 3, max = 60)
     @Size(min = 3, max = 60)
     private String firstName;
     @Size(min = 3, max = 60)

@@ -11,7 +11,7 @@
 	<groupId>com.e-class-registry</groupId>
 	<artifactId>E-Class-Registry</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>E-Class-Registry</name>
+	<name>E-Class-Registry-Group</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -20,18 +20,83 @@
 
 	<dependencies>
             
+<!--             <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>1.1.0.Final</version>
+          
+</dependency>-->
+
+<!--<dependency>
+   <groupId>org.hibernate</groupId>
+   <artifactId>hibernate-validator-cdi</artifactId>
+   <version>6.0.16.Final</version>
+</dependency>-->
+            
             <!-- Spring boot -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
+                        <exclusions>
+                            <exclusion>
+                                <groupId>org.springframework.boot</groupId>
+                                <artifactId>spring-boot-starter-logging</artifactId>
+                            </exclusion>
+                            
+<!--                            <exclusion>
+              <groupId>javax.validation</groupId>
+              <artifactId>validation-api</artifactId>
+          </exclusion>-->
+                            
+                            
+                           </exclusions>
 		</dependency>
-		<dependency>
+		
+                <!-- https://mvnrepository.com/artifact/org.json/json -->
+                <dependency>
+                    <groupId>org.json</groupId>
+                    <artifactId>json</artifactId>
+                    <version>20180813</version>
+                </dependency>
+
+                
+                
+                <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
+                        <exclusions>
+                            <exclusion>
+                                <groupId>org.springframework.boot</groupId>
+                                <artifactId>spring-boot-starter-logging</artifactId>
+                            </exclusion>
+                            
+<!--                            <exclusion>
+              <groupId>javax.validation</groupId>
+              <artifactId>validation-api</artifactId>
+          </exclusion>-->
+                            
+                             </exclusions>
+                            
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+                        <exclusions>
+                            <exclusion>
+                                <groupId>org.springframework.boot</groupId>
+                                <artifactId>spring-boot-starter-logging</artifactId>
+                            </exclusion>
+                            
+<!--                            <exclusion>
+              <groupId>javax.validation</groupId>
+              <artifactId>validation-api</artifactId>
+          </exclusion>-->
+                                <exclusion>
+                                        <groupId>org.hibernate.validator</groupId>
+                                        <artifactId>hibernate-validator</artifactId>
+                                </exclusion>
+                        </exclusions>
+                            
 		</dependency>
 
                 <!-- MySQL connector -->
@@ -45,11 +110,35 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
+                        <exclusions>
+                            <exclusion>
+                                <groupId>org.springframework.boot</groupId>
+                                <artifactId>spring-boot-starter-logging</artifactId>
+                            </exclusion>
+                            
+<!--                            <exclusion>
+              <groupId>javax.validation</groupId>
+              <artifactId>validation-api</artifactId>
+          </exclusion>-->
+                           
+                        </exclusions>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-test</artifactId>
+                        <exclusions>
+                            <exclusion>
+                                <groupId>org.springframework.boot</groupId>
+                                <artifactId>spring-boot-starter-logging</artifactId>
+                            </exclusion>
+                            
+<!--                            <exclusion>
+              <groupId>javax.validation</groupId>
+              <artifactId>validation-api</artifactId>
+          </exclusion>-->
+                            
+                        </exclusions>
 			<scope>test</scope>
 		</dependency>
                 
@@ -78,6 +167,29 @@ lib  -->
                     <artifactId>tomcat-jasper</artifactId>
                     <version>9.0.17</version>
                 </dependency>
+                
+                <!-- Add Log4j2 Dependency -->
+                <dependency>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-log4j2</artifactId>
+                </dependency>
+                
+<!--                <dependency>
+        <groupId>javax.xml.bind</groupId>
+        <artifactId>jaxb-api</artifactId>
+        <version>2.3.0</version>
+</dependency>-->
+
+<!-- https://mvnrepository.com/artifact/org.hibernate.validator/hibernate-validator -->
+<dependency>
+    <groupId>org.hibernate.validator</groupId>
+    <artifactId>hibernate-validator</artifactId>
+    <version>6.0.16.Final</version>
+</dependency>
+
+
+                
+               
                 
 	</dependencies>
 

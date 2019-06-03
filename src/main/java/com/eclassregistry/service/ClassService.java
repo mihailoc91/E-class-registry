@@ -14,10 +14,16 @@ import java.util.List;
  * @author Mihailo
  */
 public interface ClassService {
-    void saveClass (ClassDto classDto);
+
+    void saveClass(ClassDto classDto);
+
     List<ClassDto> getAllClasses(int pageNumber, int membersNumber);
+
     List<ClassDto> getAllClasses();
+
     ClassDto getClassById(int id);
+
     ClassEntity findClassById(int id);
+
     void deleteClass(int id);
 }

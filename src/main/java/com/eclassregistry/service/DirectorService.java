@@ -14,9 +14,14 @@ import java.util.List;
  * @author Grupa1
  */
 public interface DirectorService {
-    
-    UserDto saveDirector (UserDto userDto, UserEntity userEntity);
+
+    UserDto saveDirector(UserDto userDto, UserEntity userEntity);
+
     List<UserDto> getAllDirectors(int pageNumber, int membersNumber);
+
     UserDto getDirectorById(int id);
+
     void deleteDirector(UserEntity userEntity);
+
+    UserDto getDirectorByJmbg(UserEntity userEntity);
 }

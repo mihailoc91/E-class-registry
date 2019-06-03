@@ -12,16 +12,16 @@
     <head>
         <meta charset="utf-8">
         <title> welcome page </title>
-
         <link href="<c:url value="resources/main.css" />" rel="stylesheet">
     </head>
     <body class="bod">
         <ul>
-            <li><a href="<c:url value="/index"/>">Home</a></li>
+            <li><a href="<c:url value="/"/>">Home</a></li>
             <li><a href="<c:url value="/contact"/>">Contact</a></li>
             <li><a href="<c:url value="/about"/>">About</a></li>
+            <li class="log"><a href="<c:url value="/login"/>">Login</a></li>
         </ul>
-        <div class="naslov"><h1>Welcome to our school!</h1></div>
-
+        <div class="naslov"><h3>Welcome to our school!</h3></div>
+        ${loggedInUser.getId()}
     </body>
 </html>

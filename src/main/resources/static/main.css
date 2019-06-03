@@ -1,64 +1,214 @@
 
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
 }
 
 li {
-  float: left;
+    float: left;
 }
 
 li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
 li a:hover {
-  background-color: #111;
+    background-color: #111;
 }
 
 
 li {
-  display: inline;
+    display: inline;
 }
 .naslov{
-	color: black;
-	font-family: Tahoma;
-	font-size: 30px;
-	font-weight: bold;
-	text-align: center;
-	
+    color: black;
+    font-family: Tahoma;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+
 }
 .kontakt{
-	background-color: white;
-	font-size:20px;
-	font-family: Tahoma;
-	font-weight: italic;
-	text-align: left-side;
-	
+    background-color: white;
+    text-align: center;
+    font-size:18px;
+    font-family: Tahoma;
+
+
 }
 .bod {
-  background-image: url("skola.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 550px 450px;
-  
-  
+    background-image: url("skola.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 620px 500px;
+
+
 }
 h2{
-	text-align: center;
-	
+    text-align: center;
+
 }
 .nn{
-	font-family:Tahoma;
-	font-size:20px;
-	
+    font-family:Tahoma;
+    font-size:20px;
+    text-align: left;
 }
 
+h1{
+    text-align: center;
+    font-family: Tahoma;
+    font-size: 30px;
+}
+
+
+#provera{
+    background-color:graytext;
+    color: black;
+    padding: 40px;
+    text-align: center;
+    font-family: Tahoma;
+
+}
+#table{
+    font-family: Tahoma;
+    border-collapse: collapse;
+    width: 100%;
+
+}
+#table td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#table_navigation{
+    position: absolute;
+    margin-left: 550px;
+    margin-right: 500px;
+    margin-top: 400px;
+
+}
+
+input {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 6px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+input[type=submit] {
+    width: 10%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+label { 
+    
+    width: 86em;
+    margin-right: 1em; 
+
+}
+
+
+.ooo{
+    text-align: center;
+
+}
+.nuser{
+    padding:40px;
+    background-color: #f1f1f1;
+    text-align: center;
+
+}
+body{
+    text-align: center;
+
+}
+
+button{
+    text-align: center;
+}
+option{
+    margin: 250px;
+
+}
+button[type=submit]{
+    width: 8%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 12px;
+    margin: 8px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+button[type=submit]:hover {
+    background-color:#45a049 ;
+}
+form select{
+    text-align: center;
+    width:20%;
+    padding: 5px 10px;
+}
+form checkbox{
+    text-align: center;
+}
+form{
+    text-align: center;
+    margin: 5px;
+
+}
+.form form select{
+
+    width:20%;
+    padding: 5px 5px;
+    text-overflow: ellipsis;
+}
+.form form option{
+    text-align: center;;
+    margin: 5px;
+
+}
+.form form input[type=checkbox]{
+    background: #fff;
+    border-radius: 0px;
+    border: 2px solid #82F60F;
+    display: inline-block;
+    vertical-align: middle;
+    width: 12px; height: 12px;
+    padding: 2px; margin-right: 10px;
+
+}
+.log{
+    float: right;
+}
+.log form input[type=submit]{
+    width: 90%;
+    background-color: silver;
+    color: white;
+    padding: 10px 10px;
+    margin: 5px 5px;
+    border: none;
+    border-radius: 1px;
+    cursor: pointer; 
+}
 

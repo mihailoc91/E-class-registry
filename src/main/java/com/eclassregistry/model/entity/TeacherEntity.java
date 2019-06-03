@@ -18,6 +18,8 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 /**
  *
@@ -30,8 +32,11 @@ public class TeacherEntity implements Serializable{
     private int id;
     
     @ManyToOne(fetch = FetchType.EAGER)
+//    @NotNull
     private UserEntity jmbg;
+//    @NotEmpty
     private String firstName;
+//    @NotEmpty
     private String lastName;
     
        @OneToOne(fetch = FetchType.LAZY,

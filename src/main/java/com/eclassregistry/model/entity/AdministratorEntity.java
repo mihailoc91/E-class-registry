@@ -13,6 +13,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.validation.constraints.NotEmpty;
+
+
 
 /**
  *
@@ -26,9 +29,14 @@ public class AdministratorEntity implements Serializable{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     
+    // https://howtodoinjava.com/hibernate/hibernate-validator-java-bean-validation/
     @ManyToOne(fetch = FetchType.EAGER)
-    private UserEntity jmbg;
+//    @NotNull
+ private UserEntity jmbg;
+
+    @Column(nullable = false)
     private String firstName;
+//    @NotEmpty
     private String lastName;
 
     /**

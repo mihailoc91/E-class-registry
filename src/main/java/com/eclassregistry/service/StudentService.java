@@ -15,10 +15,16 @@ import java.util.List;
  * @author Grupa1
  */
 public interface StudentService {
-    
+
     void saveStudent(StudentDto studentDto);
+
     StudentEntity findStudentById(int id);
-    List <StudentDto> getAllStudents(int pageNumber, int membersNumber);
+
+    List<StudentDto> getAllStudents(int pageNumber, int membersNumber);
+
     StudentDto getStudentById(int id);
+
     void deleteStudent(int id);
+
+    List<StudentDto> getAllStudentsFromParentId(int id);
 }

@@ -11,12 +11,10 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title> about page </title>
+        <title> welcome page </title>
         <link href="<c:url value="resources/main.css" />" rel="stylesheet">
     </head>
     <body class="bod">
-        <p>Ups something went wrong!<br> Please try again.</p>
-
-
+        <p>Oopps something went horribly wrong... You broke something... Please try again..</p>
     </body>
 </html>

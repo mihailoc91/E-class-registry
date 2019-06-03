@@ -131,6 +131,20 @@ public class DirectorServiceImpl implements DirectorService{
         
         directorRepository.delete(directorEntity);
     }
+
+    @Override
+    public UserDto getDirectorByJmbg(UserEntity userEntity) {
+       UserDto userDto = new UserDto();
+      DirectorEntity directorEntity = directorRepository.findByJmbg(userEntity);
+       
+        BeanUtils.copyProperties(directorEntity, userDto);
+        userDto.setEmail(directorEntity.getJmbg().getEmail());
+        userDto.setJmbg(directorEntity.getJmbg().getJmbg());
+        userDto.setStatus(directorEntity.getJmbg().getStatus().getStatusId());
+        userDto.setStatusName(directorEntity.getJmbg().getStatus().getStatusName());
+       
+        return userDto;
+    }
     
     
 }

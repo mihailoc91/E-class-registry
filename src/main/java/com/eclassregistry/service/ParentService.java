@@ -15,11 +15,21 @@ import java.util.List;
  * @author Grupa1
  */
 public interface ParentService {
-    
-    UserDto saveParent (UserDto userDto, UserEntity userEntity);
-    List <UserDto> getAllParents(int pageNumber, int membersNumber); 
-    List <UserDto> getAllParents(); 
+
+    UserDto saveParent(UserDto userDto, UserEntity userEntity);
+
+    List<UserDto> getAllParents(int pageNumber, int membersNumber);
+
+    List<UserDto> getAllParents();
+
     UserDto getParentById(int id);
-    ParentEntity findParentById (int id);
+
+    ParentEntity findParentById(int id);
+
     void deleteParent(UserEntity userEntity);
+
+    UserDto getParentByJmbg(UserEntity userEntity);
+
+    List<UserDto> getParentsForTeacher(int teacherId);
+
 }

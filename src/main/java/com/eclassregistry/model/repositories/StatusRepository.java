@@ -6,7 +6,7 @@
 package com.eclassregistry.model.repositories;
 
 import com.eclassregistry.model.entity.StatusEntity;
-import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -14,6 +14,6 @@ import org.springframework.stereotype.Repository;
  * @author Mihailo
  */
 @Repository
-public interface StatusRepository extends PagingAndSortingRepository<StatusEntity, Integer>{
+public interface StatusRepository extends JpaRepository<StatusEntity, Integer>{
     
 }

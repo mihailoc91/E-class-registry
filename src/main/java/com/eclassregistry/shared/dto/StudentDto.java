@@ -7,7 +7,10 @@ package com.eclassregistry.shared.dto;
 
 import java.io.Serializable;
 import java.util.List;
-import java.util.Set;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 /**
  *
@@ -17,13 +20,15 @@ import java.util.Set;
 public class StudentDto implements Serializable {
     
     private int studentId;
+    @NotBlank
     private String firstName;
+    @NotBlank
     private String lastName;
     
     private ClassDto classEntity;
-    
+    @Min(1)
     private int classId;
-    
+    @NotEmpty
     private List<Integer> parents;
     
     private List<UserDto> parentsDto;

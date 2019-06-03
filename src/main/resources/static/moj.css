@@ -1,22 +1,123 @@
-
-
-h1{
-    color: red;
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
 }
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+
+li {
+    display: inline;
+}
+.log{
+    float: right;
+}
+.log form input[type=submit]{
+    width: 90%;
+    background-color: silver;
+    color: white;
+    padding: 10px 10px;
+    margin: 5px 5px;
+    border: none;
+    border-radius: 1px;
+    cursor: pointer; 
+}
+
 body{
-    background-color: yellow;
+    text-align: center;
+    background-color: white;
 }
+
 .provera{
-    color: red;
-    background-color: blue;
+    color: black;
+    background-color: silver;
 }
 
 #provera{
-    color: red;
-    background-color: blue;
+
+    background-color: white;
+    color: black;
+
+}
+.form form{
+    text-align: center;
+    margin: 5px;
+
 }
 
-.form{
-    color: green;
+.form form input {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 6px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
 }
 
+.form form input[type=submit] {
+    width: 10%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form form input[type=submit]:hover {
+    background-color: #45a049;
+}
+.form form input[type=checkbox]{
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+   width: 20px; height: 20px;
+
+}
+span{
+    display: block;
+    margin: 0.5px;
+}
+#table{
+    font-family: Tahoma;
+    border-collapse: collapse;
+    width: 100%;
+
+}
+#table td,  th {
+    border: 0px;
+    padding: 8px;
+}
+
+#table_navigation{
+    position: absolute;
+    margin-left: 550px;
+    margin-right: 500px;
+    margin-top: 400px;
+
+}
+.lll{
+    text-align: center;
+    background-color: #E7FF84;
+}

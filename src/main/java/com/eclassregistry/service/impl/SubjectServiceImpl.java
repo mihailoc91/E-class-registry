@@ -28,15 +28,15 @@ import org.springframework.transaction.annotation.Transactional;
  * @author Grupa1
  */
 @Service
-@Transactional(propagation = Propagation.SUPPORTS,readOnly = true)
-public class SubjectServiceImpl implements SubjectService{
+@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
+public class SubjectServiceImpl implements SubjectService {
 
     @Autowired
     SubjectRepository subjectRepository;
-    
+
     @Autowired
     TeacherServiceImpl teacherServiceImpl;
-    
+
     /**
      * Saves a subject into database, if that subject doesn't exists in database
      * then it create a new one, if it does then it updates it with new data.
@@ -126,16 +126,17 @@ public class SubjectServiceImpl implements SubjectService{
 
     /**
      * Returns a SubjectEntity with that id.
+     *
      * @param id int that represents Id of subject in database
-     * @return SubjectEntity 
+     * @return SubjectEntity
      */
     @Override
     public SubjectEntity getSubjectById(int id) {
         SubjectEntity subjectEntity = subjectRepository.findById(id).get();
         return subjectEntity;
     }
-    
-/**
+
+    /**
      * Returns all subjects from database, with Set<Integer> teachers that has
      * teachers id's for a current subject.
      *
@@ -162,6 +163,32 @@ public class SubjectServiceImpl implements SubjectService{
         }
 
         return allSubjectsDto;
+    }
+
+    /**
+     * Retrieves all subjects that a selected teacher has.
+     *
+     * @param Id int that represents unique id in database for selected teacher
+     * @return List<SubjectDto> filled with data from database
+     */
+    @Override
+    public List<SubjectDto> getAllSubjectsFromTeacherId(int Id) {
+
+        List<SubjectDto> allSubjects = new ArrayList<>();
+
+        List<Integer> list = subjectRepository.findAllSubjectFromteacherId(Id);
+
+        for (int i = 0; i < list.size(); i++) {
+
+            SubjectDto subjectDto = new SubjectDto();
+
+            SubjectEntity subjectEntity = getSubjectById(list.get(i));
+
+            BeanUtils.copyProperties(subjectEntity, subjectDto);
+
+            allSubjects.add(subjectDto);
+        }
+        return allSubjects;
     }
 
 }

@@ -29,23 +29,22 @@ import org.springframework.stereotype.Service;
  *
  * @author Grupa1
  */
-
 @Service
 public class TeacherServiceImpl implements TeacherService {
 
     @Autowired
     TeacherRepository teacherRepository;
-    
+
     @Autowired
     SubjectServiceImpl subjectServiceImpl;
-    
+
     @Autowired
     UserServiceImpl userServiceImpl;
-    
-   /**
-     * Saves teacher in database,
-     * if that teacher does not exists in databases then it creates a new one, 
-     * if that teacher exists in database then it updates it.
+
+    /**
+     * Saves teacher in database, if that teacher does not exists in databases
+     * then it creates a new one, if that teacher exists in database then it
+     * updates it.
      *
      * @param userDto Object of class UserDto filled with values that needs to
      * be stored in database
@@ -60,12 +59,12 @@ public class TeacherServiceImpl implements TeacherService {
 
         BeanUtils.copyProperties(userDto, teacherEntity);
         teacherEntity.setJmbg(userEntity);
-        
+
         Set<SubjectEntity> subjectsEntitys = new HashSet<>();
-        
-        for(Integer subjectId : userDto.getSubjects()){
+
+        for (Integer subjectId : userDto.getSubjects()) {
             SubjectEntity subjectEntity = subjectServiceImpl.getSubjectById(subjectId);
-            
+
             subjectsEntitys.add(subjectEntity);
         }
         teacherEntity.setSubjects(subjectsEntitys);
@@ -124,48 +123,49 @@ public class TeacherServiceImpl implements TeacherService {
      */
     @Override
     public UserDto getTeacherById(int id) {
-          UserDto userDto = new UserDto();
-      TeacherEntity teacherEntity = teacherRepository.findById(id).get();
-       
+        UserDto userDto = new UserDto();
+        TeacherEntity teacherEntity = teacherRepository.findById(id).get();
+
         BeanUtils.copyProperties(teacherEntity, userDto);
         userDto.setEmail(teacherEntity.getJmbg().getEmail());
         userDto.setJmbg(teacherEntity.getJmbg().getJmbg());
         userDto.setStatus(teacherEntity.getJmbg().getStatus().getStatusId());
         userDto.setStatusName(teacherEntity.getJmbg().getStatus().getStatusName());
-        
+
         Set<Integer> subjectsDto = new HashSet<>();
         //dodajem predmete koje ucitelj ima
-        for(SubjectEntity subjectEntity : teacherEntity.getSubjects()){
-          
+        for (SubjectEntity subjectEntity : teacherEntity.getSubjects()) {
+
             subjectsDto.add(subjectEntity.getSubjectId());
         }
-        
+
         userDto.setSubjects(subjectsDto);
-            
-        
-        
+
         return userDto;
     }
 
     /**
      * Deletes a teacher from database.
-     * @param userEntity Object of type UserEntity that represents a unique value in database
+     *
+     * @param userEntity Object of type UserEntity that represents a unique
+     * value in database
      */
     @Override
     public void deleteTeacher(UserEntity userEntity) {
-       TeacherEntity teacherEntity = teacherRepository.findByJmbg(userEntity);
-        
-        if(teacherEntity==null){
+        TeacherEntity teacherEntity = teacherRepository.findByJmbg(userEntity);
+
+        if (teacherEntity == null) {
             throw new RuntimeException("Teacher with that id does not exists!");
         }
-        
+
         teacherRepository.delete(teacherEntity);
     }
 
-
     /**
      * Retrieves all Teachers from database that don't have a class.
-     * @return  List of Objects of type UserDto filled with presentational data about those teachers
+     *
+     * @return List of Objects of type UserDto filled with presentational data
+     * about those teachers
      */
     @Override
     public List<UserDto> allAvailableTeachers() {
@@ -173,16 +173,16 @@ public class TeacherServiceImpl implements TeacherService {
         List<Object[]> listOfTeachersAsObjects = teacherRepository.findAllAvailableForClasses();
 
         for (int i = 0; i < listOfTeachersAsObjects.size(); i++) {
-            
+
             Object[] arr = listOfTeachersAsObjects.get(i);
-            
+
             UserDto userDto = new UserDto();
-            
+
             userDto.setId((Integer) arr[0]);
             userDto.setFirstName((String) arr[1]);
             userDto.setLastName((String) arr[2]);
-            userDto.setJmbg(((BigInteger)arr[3]).longValue());
-            
+            userDto.setJmbg(((BigInteger) arr[3]).longValue());
+
             returnValue.add(userDto);
         }
 
@@ -191,17 +191,73 @@ public class TeacherServiceImpl implements TeacherService {
 
     /**
      * Retrieves a teacher from database with that id.
+     *
      * @param id int that represents ID from database
      * @return TeacherEntity.class filled with values from database
      */
     @Override
     public TeacherEntity getTeacher(int id) {
         TeacherEntity teacherEntity = teacherRepository.findById(id).get();
-        
+
         return teacherEntity;
     }
 
- 
-   
-    
+    /**
+     * Retrieves a teacher from database with that jmbg.
+     *
+     * @param userEntity object of UserEntity.class that represents jmbg from
+     * database
+     * @return TeacherEntity.class filled with values from database
+     */
+    @Override
+    public UserDto getTeacherByJmbg(UserEntity userEntity) {
+        UserDto userDto = new UserDto();
+        TeacherEntity teacherEntity = teacherRepository.findByJmbg(userEntity);
+
+        BeanUtils.copyProperties(teacherEntity, userDto);
+        userDto.setEmail(teacherEntity.getJmbg().getEmail());
+        userDto.setJmbg(teacherEntity.getJmbg().getJmbg());
+        userDto.setStatus(teacherEntity.getJmbg().getStatus().getStatusId());
+        userDto.setStatusName(teacherEntity.getJmbg().getStatus().getStatusName());
+
+        Set<Integer> subjectsDto = new HashSet<>();
+        //dodajem predmete koje ucitelj ima
+        for (SubjectEntity subjectEntity : teacherEntity.getSubjects()) {
+
+            subjectsDto.add(subjectEntity.getSubjectId());
+        }
+
+        userDto.setSubjects(subjectsDto);
+
+        return userDto;
+    }
+
+    /**
+     * Finds all teachers that teach to a class in which current parents kids
+     * are.
+     *
+     * @param parentId int that represents id of a Parent
+     * @return List<UserDto> filled with data about teachers that teach his kids
+     */
+    @Override
+    public List<UserDto> getTeachersForParent(int parentId) {
+        List<UserDto> returnValue = new ArrayList<>();
+        List<Object[]> listOfTeachersAsObjects = teacherRepository.findAllForMessagesByParentId(parentId);
+
+        for (int i = 0; i < listOfTeachersAsObjects.size(); i++) {
+
+            Object[] arr = listOfTeachersAsObjects.get(i);
+
+            UserDto userDto = new UserDto();
+
+            userDto.setId((Integer) arr[0]);
+            userDto.setFirstName((String) arr[1]);
+            userDto.setLastName((String) arr[2]);
+
+            returnValue.add(userDto);
+        }
+
+        return returnValue;
+    }
+
 }

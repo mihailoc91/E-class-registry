@@ -15,11 +15,20 @@ import java.util.List;
  * @author Grupa1
  */
 public interface TeacherService {
-    
-    UserDto saveTeacher (UserDto userDto, UserEntity userEntity);
+
+    UserDto saveTeacher(UserDto userDto, UserEntity userEntity);
+
     TeacherEntity getTeacher(int id);
-    List <UserDto> getAllTeachers(int pageNumber, int membersNumber);
+
+    List<UserDto> getAllTeachers(int pageNumber, int membersNumber);
+
     UserDto getTeacherById(int id);
+
     void deleteTeacher(UserEntity userEntity);
+
     List<UserDto> allAvailableTeachers();
+
+    UserDto getTeacherByJmbg(UserEntity userEntity);
+
+    List<UserDto> getTeachersForParent(int parentId);
 }
